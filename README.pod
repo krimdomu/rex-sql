@@ -41,7 +41,7 @@ And the schema.yml:
  Contact:
     columns:
        id:
-           type: integer(4)
+          type: integer(4)
           primary: true
           autoincrement: true
        name:
