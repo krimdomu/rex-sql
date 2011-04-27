@@ -1,0 +1,53 @@
+=pod
+
+rex-sql is a (R)?ex module to manage database schemas.
+
+=head2 Usage
+
+In your Rexfile use the following commands.
+
+ use Rex::SQL;
+
+ sql_user "root";
+ sql_password "";
+ sql_database "test";
+ sql_type "mysql";
+
+ desc "Prepare Database";
+ task "prepare", sub {
+   sql yaml => "schema.yml";
+ };
+ 
+
+And the schema.yml:
+
+---
+ User:
+    columns:
+       id:
+          type: integer(4)
+          primary: true
+          autoincrement: true
+          null: false
+       contact_id:
+          type: integer(4)
+       username:
+          type: string(255)
+          default: blub
+       role:
+          type: enum
+          values: [eins, zwei, drei]
+
+ Contact:
+    columns:
+       id:
+           type: integer(4)
+          primary: true
+          autoincrement: true
+       name:
+          type: string(255)
+    options:
+       type: INNODB
+       collate: utf8_unicode_ci
+       charset: utf8
+
