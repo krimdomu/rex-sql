@@ -21,7 +21,7 @@ In your Rexfile use the following commands.
 
 And the schema.yml:
 
----
+ ---
  User:
     columns:
        id:
