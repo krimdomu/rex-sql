@@ -1,0 +1,12 @@
+Source: rex-sql
+Section: admin
+Priority: optional
+Maintainer: Jan Gehring <jan.gehring@gmail.com>
+Build-Depends: debhelper (>= 4), perl (>= 5.10.0), rex (>= 0.3.99)
+Standards-Version: 3.5.1
+Homepage: https://github.com/krimdomu/rex-sql
+
+Package: rex-sql
+Architecture: all
+Depends: perl (>= 5.10.0), rex (>= 0.3.99)
+Description: SQL Modul for (R)?ex
